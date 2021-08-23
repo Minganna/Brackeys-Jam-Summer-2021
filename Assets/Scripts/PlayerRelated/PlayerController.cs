@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
 
     Vector3 moveDirection;
 
+    public static PlayerController instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,12 +85,18 @@ public class PlayerController : MonoBehaviour
 
         if(charController.isGrounded)
         {
+            
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpForce;
             }
+            
         }
-        moveDirection.y += Physics.gravity.y * Time.deltaTime*gravityScale;
+        else
+        {
+            moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+        }
+       
 
         
     }
