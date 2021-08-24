@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float rotateSpeed = 10.0f;
 
-    bool StartingGrounded=false;
 
     [SerializeField]
     GameObject playerModel;
@@ -26,6 +25,8 @@ public class PlayerController : MonoBehaviour
     Vector3 moveDirection;
 
     public static PlayerController instance;
+
+    public bool canMove=true;
 
     private void Awake()
     {
@@ -52,25 +53,36 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        CharacterMovements();
+        if(canMove)
+        {
+            CharacterMovements();
+        }
+        
     }
 
     //Function used to apply physics
     void FixedUpdate()
     {
-        charController.Move((moveDirection * Time.deltaTime));
-        if(Input.GetAxisRaw("Horizontal")!=0|| Input.GetAxisRaw("Vertical") != 0)
+        if (canMove)
         {
-            transform.rotation = Quaternion.Euler(0.0f, theCam.transform.rotation.eulerAngles.y, 0.0f);
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0.0f, moveDirection.z));
-            if(playerModel)
+            charController.Move((moveDirection * Time.deltaTime));
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
             {
-                playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
-            }
+                transform.rotation = Quaternion.Euler(0.0f, theCam.transform.rotation.eulerAngles.y, 0.0f);
+                Quaternion newRotation = Quaternion.LookRotation(new Vector3(moveDirection.x, 0.0f, moveDirection.z));
+                if (playerModel)
+                {
+                    playerModel.transform.rotation = Quaternion.Slerp(playerModel.transform.rotation, newRotation, rotateSpeed * Time.deltaTime);
+                }
 
+            }
+            PlayerAnimator.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
+            PlayerAnimator.SetBool("Grounded", charController.isGrounded);
         }
-        PlayerAnimator.SetFloat("Speed", Mathf.Abs(moveDirection.x) + Mathf.Abs(moveDirection.z));
-        PlayerAnimator.SetBool("Grounded", charController.isGrounded);
+        else
+        {
+            PlayerAnimator.SetFloat("Speed", 0);
+        }
         
     }
 
