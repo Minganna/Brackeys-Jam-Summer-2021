@@ -53,4 +53,9 @@ public class GameManager : MonoBehaviour
         CameraController.instance.cameraBrain.enabled = true;
         PlayerController.instance.gameObject.SetActive(true);
     }
+
+    public void SetSpawnPoint(Vector3 newSpawnPosition)
+    {
+        respawnPosition = newSpawnPosition;
+    }
 }
