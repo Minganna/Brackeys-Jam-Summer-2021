@@ -8,6 +8,8 @@ public class HealthManager : MonoBehaviour
     public static HealthManager instance;
 
     public int currentHealth, maxHealth;
+    public float invicibleHealth=2.0f;
+    private float invincibleCounter;
 
     private void Awake()
     {
@@ -16,23 +18,70 @@ public class HealthManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        ResetHealth();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        FlashingPlayerLogic();
+    }
+
+    private void FlashingPlayerLogic()
+    {
+        if (invincibleCounter > 0)
+        {
+            invincibleCounter -= Time.deltaTime;
+
+            for (int i = 0; i < PlayerController.instance.playerPieces.Length; i++)
+            {
+                if (Mathf.Floor(invincibleCounter * 5.0f) % 2 == 0)
+                {
+                    PlayerController.instance.playerPieces[i].SetActive(true);
+                }
+                else
+                {
+                    PlayerController.instance.playerPieces[i].SetActive(false);
+                }
+
+                if (invincibleCounter <= 0)
+                {
+                    PlayerController.instance.playerPieces[i].SetActive(true);
+                }
+            }
+        }
     }
 
     public void Hurt(int damage)
     {
-        currentHealth -= damage;
-
-        if(currentHealth<=0)
+        if(invincibleCounter<=0)
         {
-            currentHealth = 0;
-            GameManager.instance.Respawn();
+            currentHealth -= damage;
+
+            if (currentHealth <= 0)
+            {
+                currentHealth = 0;
+                GameManager.instance.Respawn();
+            }
+            else
+            {
+                PlayerController.instance.KnockBack();
+                invincibleCounter = invicibleHealth;
+            }
+        }
+ 
+    }
+
+    public void ResetHealth()
+    {
+        currentHealth = maxHealth;
+    }
+
+    public void AddHealth(int amountHeal)
+    {
+        if(currentHealth<maxHealth)
+        {
+            currentHealth += amountHeal;
         }
     }
 }

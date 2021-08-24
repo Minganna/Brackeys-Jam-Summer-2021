@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     GameObject playerModel;
+    public GameObject[] playerPieces;
 
     Animator PlayerAnimator;
 
@@ -27,6 +28,11 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     public bool canMove=true;
+
+    public bool isKnocking;
+    public float knockBackLenght=0.5f;
+    private float knockBackCounter;
+    public Vector2 knockBackPower;
 
     private void Awake()
     {
@@ -56,6 +62,23 @@ public class PlayerController : MonoBehaviour
         if(canMove)
         {
             CharacterMovements();
+        }
+        if(isKnocking)
+        {
+            knockBackCounter -= Time.deltaTime;
+            float yStore = moveDirection.y;
+            moveDirection = (playerModel.transform.forward * -knockBackPower.x);
+            moveDirection.y = yStore;
+
+            moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+
+            charController.Move(moveDirection * Time.deltaTime);
+
+            if (knockBackCounter<=0)
+            {
+                isKnocking = false;
+                canMove = true;
+            }
         }
         
     }
@@ -111,5 +134,15 @@ public class PlayerController : MonoBehaviour
        
 
         
+    }
+
+    public void KnockBack()
+    {
+        isKnocking = true;
+        canMove = false;
+        knockBackCounter = knockBackLenght;
+        Debug.Log("Knock Back");
+        moveDirection.y = knockBackPower.y;
+        charController.Move(moveDirection * Time.deltaTime);
     }
 }
