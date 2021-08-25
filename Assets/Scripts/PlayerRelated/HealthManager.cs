@@ -7,7 +7,7 @@ public class HealthManager : MonoBehaviour
 
     public static HealthManager instance;
 
-    public int currentHealth, maxHealth;
+    public int currentHealth, maxHealth,Lives;
     public float invicibleHealth=2.0f;
     private float invincibleCounter;
 
@@ -60,7 +60,7 @@ public class HealthManager : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                currentHealth = 0;
+                PlayerKilled();
                 GameManager.instance.Respawn();
             }
             else
@@ -68,6 +68,7 @@ public class HealthManager : MonoBehaviour
                 PlayerController.instance.KnockBack();
                 invincibleCounter = invicibleHealth;
             }
+            UpdateUI();
         }
  
     }
@@ -75,6 +76,7 @@ public class HealthManager : MonoBehaviour
     public void ResetHealth()
     {
         currentHealth = maxHealth;
+        UpdateUI();
     }
 
     public void AddHealth(int amountHeal)
@@ -82,6 +84,48 @@ public class HealthManager : MonoBehaviour
         if(currentHealth<maxHealth)
         {
             currentHealth += amountHeal;
+            UpdateUI();
         }
+    }
+
+    public void UpdateUI()
+    {
+        UiManager.instance.LifeText.text = Lives.ToString();
+        for (int i = 0; i <= UiManager.instance.HealthImages.Length; i++)
+        {
+            if(i<currentHealth)
+            {
+                UiManager.instance.HealthImages[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                if(i< UiManager.instance.HealthImages.Length)
+                {
+                    UiManager.instance.HealthImages[i].gameObject.SetActive(false);
+                }
+                
+            }    
+        }
+    }
+
+    public void AddLife()
+    {
+        Lives++;
+        UpdateUI();
+    }
+
+    public void PlayerKilled()
+    {
+        currentHealth = 0;
+        if(Lives>0)
+        {
+            Lives--;
+        }
+        else
+        {
+            Debug.Log("BackToMainScreen");
+        }
+        UpdateUI();
+        
     }
 }

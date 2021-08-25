@@ -6,6 +6,7 @@ public class HearthPickUp : MonoBehaviour
 {
     public int HealAmount;
     public bool isFullHeal;
+    public bool isExtraLife;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,10 @@ public class HearthPickUp : MonoBehaviour
             if(isFullHeal)
             {
                 HealthManager.instance.ResetHealth();
+            }
+            else if(isExtraLife)
+            {
+                HealthManager.instance.AddLife();
             }
             else
             {
