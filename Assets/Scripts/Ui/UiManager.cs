@@ -16,7 +16,11 @@ public class UiManager : MonoBehaviour
     public Image[] HealthImages;
     public TextMeshProUGUI LifeText;
     public TextMeshProUGUI CoinText;
-    public GameObject pauseScreen;
+    public GameObject pauseScreen,OptionScreen;
+
+    public Slider MusicVolSlider;
+    public Slider SfxVolSlider;
+
 
     private void Awake()
     {
@@ -56,11 +60,11 @@ public class UiManager : MonoBehaviour
     }
     public void OpenOptions()
     {
-
+        OptionScreen.SetActive(true);
     }
     public void CloseOptions()
     {
-
+        OptionScreen.SetActive(false);
     }
     public void LevelSelect()
     {
@@ -69,5 +73,14 @@ public class UiManager : MonoBehaviour
     public void MainMenu()
     {
 
+    }
+
+    public void SetMusicLevel()
+    {
+        AudioManager.instance.SetMusicLevel();
+    }
+    public void SetSfxLevel()
+    {
+        AudioManager.instance.SetSfxLevel();
     }
 }

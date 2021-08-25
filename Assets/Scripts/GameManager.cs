@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
         if(UiManager.instance.pauseScreen.activeInHierarchy)
         {
             UiManager.instance.pauseScreen.SetActive(false);
+            UiManager.instance.CloseOptions();
             Time.timeScale = 1.0f;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
