@@ -28,6 +28,16 @@ public class GameManager : MonoBehaviour
         AddCollectable(CollectibleCount);
         
     }
+
+    private void Update()
+    {
+        if(Input.GetButtonDown("PauseMenu"))
+        {
+            PauseUnPause();
+        }
+    }
+
+
     public void Respawn()
     {
         StartCoroutine(RespawnPlayer());
@@ -68,5 +78,24 @@ public class GameManager : MonoBehaviour
     {
         CollectibleCount += valueToAdd;
         UiManager.instance.CoinText.text = "" + CollectibleCount;
+    }
+
+
+    public void PauseUnPause()
+    {
+        if(UiManager.instance.pauseScreen.activeInHierarchy)
+        {
+            UiManager.instance.pauseScreen.SetActive(false);
+            Time.timeScale = 1.0f;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            UiManager.instance.pauseScreen.SetActive(true);
+            Time.timeScale = 0.0f;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 }

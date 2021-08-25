@@ -16,6 +16,7 @@ public class UiManager : MonoBehaviour
     public Image[] HealthImages;
     public TextMeshProUGUI LifeText;
     public TextMeshProUGUI CoinText;
+    public GameObject pauseScreen;
 
     private void Awake()
     {
@@ -47,5 +48,26 @@ public class UiManager : MonoBehaviour
                 fadeFromBlack= false;
             }
         }
+    }
+
+    public void Resume()
+    {
+        GameManager.instance.PauseUnPause();
+    }
+    public void OpenOptions()
+    {
+
+    }
+    public void CloseOptions()
+    {
+
+    }
+    public void LevelSelect()
+    {
+
+    }
+    public void MainMenu()
+    {
+
     }
 }
