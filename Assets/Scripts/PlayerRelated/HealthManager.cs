@@ -10,6 +10,7 @@ public class HealthManager : MonoBehaviour
     public int currentHealth, maxHealth,Lives;
     public float invicibleHealth=2.0f;
     private float invincibleCounter;
+    public int DeathSFX;
 
     private void Awake()
     {
@@ -116,6 +117,7 @@ public class HealthManager : MonoBehaviour
 
     public void PlayerKilled()
     {
+        AudioManager.instance.Sfx(DeathSFX);
         currentHealth = 0;
         if(Lives>0)
         {

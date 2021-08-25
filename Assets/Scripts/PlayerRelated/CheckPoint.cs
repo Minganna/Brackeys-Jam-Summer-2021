@@ -10,6 +10,7 @@ public class CheckPoint : MonoBehaviour
     bool IscheckPointOn;
     public GameObject CheckPointParticles;
     public GameObject ObjectRef;
+    public int checkpointSfx;
 
     // Start is called before the first frame update
     void Awake()
@@ -43,6 +44,7 @@ public class CheckPoint : MonoBehaviour
         if(other.tag=="Player")
         {
             CheckPointActivateAndDeactivateLogic();
+            AudioManager.instance.Sfx(checkpointSfx);
         }
     }
 

@@ -60,6 +60,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealAmount: 1
   isFullHeal: 0
+  isExtraLife: 0
+  LifeSfx: 0
+  HealthSfx: 7
 --- !u!95 &79533976743182752
 Animator:
   serializedVersion: 3

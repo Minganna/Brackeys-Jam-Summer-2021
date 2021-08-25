@@ -67,6 +67,8 @@ MonoBehaviour:
   HealAmount: 0
   isFullHeal: 0
   isExtraLife: 1
+  LifeSfx: 7
+  HealthSfx: 0
 --- !u!65 &5556865458395594755
 BoxCollider:
   m_ObjectHideFlags: 0

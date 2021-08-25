@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     
     Vector3 respawnPosition;
 
+    public static int CollectibleCount;
+
     private void Awake()
     {
         instance = this;
@@ -22,15 +24,10 @@ public class GameManager : MonoBehaviour
         {
             respawnPosition = PlayerController.instance.transform.position;
         }
+
+        AddCollectable(CollectibleCount);
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Respawn()
     {
         StartCoroutine(RespawnPlayer());
@@ -65,5 +62,11 @@ public class GameManager : MonoBehaviour
     public void SetSpawnPoint(Vector3 newSpawnPosition)
     {
         respawnPosition = newSpawnPosition;
+    }
+
+    public void AddCollectable(int valueToAdd)
+    {
+        CollectibleCount += valueToAdd;
+        UiManager.instance.CoinText.text = "" + CollectibleCount;
     }
 }

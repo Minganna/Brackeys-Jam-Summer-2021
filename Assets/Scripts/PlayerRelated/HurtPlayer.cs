@@ -6,6 +6,7 @@ public class HurtPlayer : MonoBehaviour
 {
     [SerializeField]
     int Damage = 1;
+    public int DamageSfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class HurtPlayer : MonoBehaviour
         {
             HealthManager.instance.Hurt(Damage);
             Debug.Log("Hurting the Player");
+            AudioManager.instance.Sfx(DamageSfx);
         }
     }
 }
