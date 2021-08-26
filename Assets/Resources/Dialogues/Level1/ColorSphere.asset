@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6313296881726468698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: MainNode
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: Hi!
+  children:
+  - 3e34c988-c158-4e99-813f-9c8ebd6f2019
+  position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-3052594328230647961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 9bf3beba-a7ef-4305-b150-72e3f5c11180
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: if you destroy it the area might change, but is worth it to get the tadpole!
+  children: []
+  position:
+    serializedVersion: 2
+    x: 750
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d565f144389b41954e322bf1ef7e3, type: 3}
+  m_Name: ColorSphere
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -6313296881726468698}
+  - {fileID: 5033840826661343448}
+  - {fileID: 8449624838652301072}
+  - {fileID: -3052594328230647961}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &5033840826661343448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 3e34c988-c158-4e99-813f-9c8ebd6f2019
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: This is a color sphere, it contains the color of this world
+  children:
+  - 2191af6e-0322-4332-8d4e-ff069945becf
+  position:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &8449624838652301072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 2191af6e-0322-4332-8d4e-ff069945becf
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: as well as a order tadpole
+  children:
+  - 9bf3beba-a7ef-4305-b150-72e3f5c11180
+  position:
+    serializedVersion: 2
+    x: 500
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
