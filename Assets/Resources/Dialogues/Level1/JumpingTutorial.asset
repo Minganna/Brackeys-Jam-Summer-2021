@@ -1,6 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6313296881726468698
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d565f144389b41954e322bf1ef7e3, type: 3}
+  m_Name: JumpingTutorial
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 8271331738085783926}
+  - {fileID: 2894372192490449822}
+  - {fileID: 6981763461886403375}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2894372192490449822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 967cc720-bd69-40dd-9456-75df43136287
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: This world is full of platforms, but don't worry, you can jump on them!
+  children:
+  - 63ae44cf-848f-425d-bc0c-184b5b57f7fd
+  position:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &6981763461886403375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 63ae44cf-848f-425d-bc0c-184b5b57f7fd
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: try to press the Space bar to Jump on these platforms and collect those succule.....
+    interesting worms!
+  children: []
+  position:
+    serializedVersion: 2
+    x: 500
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &8271331738085783926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16,105 +83,11 @@ MonoBehaviour:
   Question: 0
   Text: Hi!
   children:
-  - 3e34c988-c158-4e99-813f-9c8ebd6f2019
+  - 967cc720-bd69-40dd-9456-75df43136287
   position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 250
-    height: 100
-  OnEnterAction: 
-  OnExitAction: 
---- !u!114 &-3052594328230647961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
-  m_Name: 9bf3beba-a7ef-4305-b150-72e3f5c11180
-  m_EditorClassIdentifier: 
-  PlayerSpeaking: 0
-  Question: 0
-  Text: if you are unsure on how to punch try pressing E or left mouse click near
-    the sphere
-  children: []
-  position:
-    serializedVersion: 2
-    x: 750
-    y: 0
-    width: 250
-    height: 100
-  OnEnterAction: 
-  OnExitAction: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3d565f144389b41954e322bf1ef7e3, type: 3}
-  m_Name: ColorSphere
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: -6313296881726468698}
-  - {fileID: 5033840826661343448}
-  - {fileID: 8449624838652301072}
-  - {fileID: -3052594328230647961}
-  newNodeOffset: {x: 250, y: 0}
---- !u!114 &5033840826661343448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
-  m_Name: 3e34c988-c158-4e99-813f-9c8ebd6f2019
-  m_EditorClassIdentifier: 
-  PlayerSpeaking: 0
-  Question: 0
-  Text: This is a color sphere, it contains the color of this world as we see
-  children:
-  - 2191af6e-0322-4332-8d4e-ff069945becf
-  position:
-    serializedVersion: 2
-    x: 250
-    y: 0
-    width: 250
-    height: 100
-  OnEnterAction: 
-  OnExitAction: 
---- !u!114 &8449624838652301072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
-  m_Name: 2191af6e-0322-4332-8d4e-ff069945becf
-  m_EditorClassIdentifier: 
-  PlayerSpeaking: 0
-  Question: 0
-  Text: as well as a order tadpole... you should be able to free it by punching the
-    sphere
-  children:
-  - 9bf3beba-a7ef-4305-b150-72e3f5c11180
-  position:
-    serializedVersion: 2
-    x: 499
-    y: 6
     width: 250
     height: 100
   OnEnterAction: 

@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
 
     public static int CollectibleCount;
 
+    public static bool isSketchCameraOn;
+
     private void Awake()
     {
         instance = this;
+        Camera.main.GetComponent<CameraSketch>().enabled = isSketchCameraOn;
     }
     // Start is called before the first frame update
     void Start()
@@ -98,5 +101,12 @@ public class GameManager : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
+    }
+
+    public void SetCameraSketch()
+    {
+        isSketchCameraOn = true;
+        Camera.main.GetComponent<CameraSketch>().enabled = isSketchCameraOn;
+       
     }
 }

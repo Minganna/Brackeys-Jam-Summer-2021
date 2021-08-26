@@ -18,6 +18,7 @@ namespace Dialogue
             anim = this.GetComponentInChildren<Animator>();
         }
 
+
         public Dialogue GetDialogues()
         {
             return characterDialouges;

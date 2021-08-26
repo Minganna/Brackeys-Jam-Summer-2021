@@ -11,5 +11,15 @@ public class HurtEnemy : MonoBehaviour
         {
             other.GetComponent<EnemyHealthManager>().TakeDamage(JumpDeath);
         }
+        if(other.tag=="ColorS")
+        {
+            if(!JumpDeath)
+            {
+                if(FindObjectOfType<ColorSphereLogic>())
+                {
+                    FindObjectOfType<ColorSphereLogic>().DestroySphereandchangeColor();
+                }
+            }
+        }
     }
 }

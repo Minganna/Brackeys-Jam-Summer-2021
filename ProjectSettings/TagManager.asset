@@ -8,6 +8,7 @@ TagManager:
   - Cloud
   - Terrain
   - Enemy
+  - ColorS
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - Player
   - OrdertadPoles
   - FinalBoss
-  - 
+  - Assistant
   - 
   - 
   - 

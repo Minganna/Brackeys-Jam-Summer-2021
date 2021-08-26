@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7578600706908644214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 559085fd-1b6e-44c4-ba87-8d9a11450252
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: We must get them back! but they are hidden in differents sections of this
+    world
+  children:
+  - 10838ee9-2376-447b-8282-0009865b9bab
+  position:
+    serializedVersion: 2
+    x: 541
+    y: -5
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-7081743600448938906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 143751be-8973-4c45-a6d2-76de73577d16
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: you are probably confused on what happened. right?
+  children:
+  - d3a03770-792e-45f3-ad57-754b39b7240f
+  position:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-2108059972996587603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: MainNode
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: Hi! My name is Zodolpha
+  children:
+  - 143751be-8973-4c45-a6d2-76de73577d16
+  position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-1084435146466495040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 10838ee9-2376-447b-8282-0009865b9bab
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: I have noticed that following these deliciou.... little worms can help find
+    the stolen tadpoles
+  children:
+  - 47deaa1e-f049-44c2-bace-30970e88c3cc
+  position:
+    serializedVersion: 2
+    x: 563
+    y: 94
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d565f144389b41954e322bf1ef7e3, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2108059972996587603}
+  - {fileID: -7081743600448938906}
+  - {fileID: 6373846174747145469}
+  - {fileID: -7578600706908644214}
+  - {fileID: 4254351767285283182}
+  - {fileID: -1084435146466495040}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &4254351767285283182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 47deaa1e-f049-44c2-bace-30970e88c3cc
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: 'be careful tho, it seems that each tadpoles is preventing this world to
+    be complete chaos! '
+  children: []
+  position:
+    serializedVersion: 2
+    x: 867
+    y: 87
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &6373846174747145469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: d3a03770-792e-45f3-ad57-754b39b7240f
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: we awakened in this weird world after the order tadpoles were stolen
+  children:
+  - 559085fd-1b6e-44c4-ba87-8d9a11450252
+  position:
+    serializedVersion: 2
+    x: 264
+    y: 103
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
