@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float rotateSpeed = 10.0f;
 
+    public float bounceForce = 8.0f;
+
 
     [SerializeField]
     GameObject playerModel;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
     public float knockBackLenght=0.5f;
     private float knockBackCounter;
     public Vector2 knockBackPower;
+    public bool canPunch = true;
 
     private void Awake()
     {
@@ -59,28 +62,39 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(Input.GetButtonDown("Fire1")&&canPunch)
+        {
+            canMove = false;
+            PlayerAnimator.SetTrigger("Punching");
+            canPunch = false;
+        }
         if(canMove)
         {
             CharacterMovements();
         }
         if(isKnocking)
         {
-            knockBackCounter -= Time.deltaTime;
-            float yStore = moveDirection.y;
-            moveDirection = (playerModel.transform.forward * -knockBackPower.x);
-            moveDirection.y = yStore;
-
-            moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
-
-            charController.Move(moveDirection * Time.deltaTime);
-
-            if (knockBackCounter<=0)
-            {
-                isKnocking = false;
-                canMove = true;
-            }
+            Knocking();
         }
-        
+
+    }
+
+    private void Knocking()
+    {
+        knockBackCounter -= Time.deltaTime;
+        float yStore = moveDirection.y;
+        moveDirection = (playerModel.transform.forward * -knockBackPower.x);
+        moveDirection.y = yStore;
+
+        moveDirection.y += Physics.gravity.y * Time.deltaTime * gravityScale;
+
+        charController.Move(moveDirection * Time.deltaTime);
+
+        if (knockBackCounter <= 0)
+        {
+            isKnocking = false;
+            canMove = true;
+        }
     }
 
     //Function used to apply physics
@@ -143,6 +157,12 @@ public class PlayerController : MonoBehaviour
         knockBackCounter = knockBackLenght;
         Debug.Log("Knock Back");
         moveDirection.y = knockBackPower.y;
+        charController.Move(moveDirection * Time.deltaTime);
+    }
+
+    public void Bounce()
+    {
+        moveDirection.y = bounceForce;
         charController.Move(moveDirection * Time.deltaTime);
     }
 }

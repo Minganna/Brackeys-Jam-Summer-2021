@@ -30,11 +30,12 @@ namespace Dialogue
         private void OnTriggerEnter(Collider other)
         {
             PlayerConversant.instance.getDialogueData(this, characterDialouges);
-            Debug.Log("Start Conversation with Me");
+            PlayerController.instance.canPunch = false;
         }
         private void OnTriggerExit(Collider other)
         {
             PlayerConversant.instance.canDialogueWithCharacter = false;
+            PlayerController.instance.canPunch = true;
         }
     }
 }
