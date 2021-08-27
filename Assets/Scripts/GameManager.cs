@@ -117,9 +117,15 @@ public class GameManager : MonoBehaviour
 
     public void SetCameraSketch()
     {
-        isSketchCameraOn = true;
+        isSketchCameraOn = !isSketchCameraOn;
         Camera.main.GetComponent<CameraSketch>().enabled = isSketchCameraOn;
        
+    }
+    public void SetCameraSketchColorBall()
+    {
+        isSketchCameraOn = true;
+        Camera.main.GetComponent<CameraSketch>().enabled = isSketchCameraOn;
+
     }
 
 

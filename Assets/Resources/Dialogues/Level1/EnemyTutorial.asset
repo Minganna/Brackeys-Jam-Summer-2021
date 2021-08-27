@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2519527677856405291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: MainNode
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: Hi!
+  children:
+  - fa2e65c9-eb26-4014-9fe3-8a86147478c8
+  position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-818506102201755570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: d27f21ad-10d8-4e62-9b28-6e3a5f268682
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: it seems that one of them holds a order tadpole
+  children: []
+  position:
+    serializedVersion: 2
+    x: 1001
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &-21449097505137731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: 8d2a93e0-3537-4eed-b812-5c34ed81ea0b
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: or punch them to make them disappear
+  children:
+  - d27f21ad-10d8-4e62-9b28-6e3a5f268682
+  position:
+    serializedVersion: 2
+    x: 751
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3d565f144389b41954e322bf1ef7e3, type: 3}
+  m_Name: EnemyTutorial
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -2519527677856405291}
+  - {fileID: 6894983312183520621}
+  - {fileID: 1528894891777341405}
+  - {fileID: -21449097505137731}
+  - {fileID: -818506102201755570}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &1528894891777341405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: e64fc32e-92c9-4332-b183-0b2b18e4250c
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: 'you can jump on them '
+  children:
+  - 8d2a93e0-3537-4eed-b812-5c34ed81ea0b
+  position:
+    serializedVersion: 2
+    x: 501
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 
+--- !u!114 &6894983312183520621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1db36d54826edc4ba7a891612855530, type: 3}
+  m_Name: fa2e65c9-eb26-4014-9fe3-8a86147478c8
+  m_EditorClassIdentifier: 
+  PlayerSpeaking: 0
+  Question: 0
+  Text: Be careful on these guys, the look dangerous
+  children:
+  - e64fc32e-92c9-4332-b183-0b2b18e4250c
+  position:
+    serializedVersion: 2
+    x: 250
+    y: 0
+    width: 250
+    height: 100
+  OnEnterAction: 
+  OnExitAction: 

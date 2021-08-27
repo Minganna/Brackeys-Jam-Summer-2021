@@ -7,8 +7,8 @@ public class Levelscollectiblemanager : MonoBehaviour
     public static Levelscollectiblemanager instance;
     public ChangeMapPointColors[] LevelsPoints;
 
-    public static bool[] level1=new bool[2];
-    public static bool[] level2 = new bool[5];
+    public static bool[] level1=new bool[3];
+    public static bool[] level2 = new bool[2];
     public static bool[] level3 = new bool[2];
     // Start is called before the first frame update
     private void Awake()
