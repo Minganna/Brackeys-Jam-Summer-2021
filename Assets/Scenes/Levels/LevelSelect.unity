@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 5781bbc89030d864d8d22edccf43d8cb, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 1fd7e727665ccad47884980fc4b7bdcd, type: 2}
 --- !u!4 &10328134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 315116478308800776, guid: 5a0a5ada365afac43a7447149f3b341f, type: 3}
@@ -1178,6 +1178,14 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1807215796, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 633.70557
+      objectReference: {fileID: 0}
+    - target: {fileID: 1807215796, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -97.68115
+      objectReference: {fileID: 0}
     - target: {fileID: 2010170201, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -1337,6 +1345,18 @@ PrefabInstance:
     - target: {fileID: 6509832088517630750, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.94382954
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509832088517630750, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509832088517630750, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509832088517630750, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6509832088656479005, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalRotation.y
@@ -8521,6 +8541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: LevelsWorld
+  levelToCheck: 
 --- !u!4 &2751777374531786023
 Transform:
   m_ObjectHideFlags: 0
@@ -8586,7 +8607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d2e6bff70e342ae428e1ce64108d069e, type: 2}
+  - {fileID: 2100000, guid: 896f9989553aeb540ab8440b08cb2f64, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

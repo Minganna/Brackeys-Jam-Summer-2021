@@ -13,6 +13,6 @@ public class ActivateDamage : MonoBehaviour
     }
     public void DestroyObject()
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }    
 }

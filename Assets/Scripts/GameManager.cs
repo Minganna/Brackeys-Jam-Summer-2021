@@ -147,6 +147,7 @@ public class GameManager : MonoBehaviour
         
         if(changeScene)
         {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name+"_unlocked",1);
             SceneManager.LoadScene(levelToLoad);
         }
         else

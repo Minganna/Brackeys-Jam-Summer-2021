@@ -40,6 +40,11 @@ public class Levelscollectiblemanager : MonoBehaviour
                     level2[tadpole.tadpoleindex] = true;
                     break;
                 }
+            case 2:
+                {
+                    level3[tadpole.tadpoleindex] = true;
+                    break;
+                }
         }
     }
 
@@ -73,20 +78,33 @@ public class Levelscollectiblemanager : MonoBehaviour
                     }
                     break;
                 }
+            case 2:
+                {
+                    foreach (bool achieved in level3)
+                    {
+                        if (achieved)
+                        {
+                            collected++;
+                        }
+                        size++;
+                    }
+                    break;
+                }
+
         }
         if(collected==0)
         {
-            Debug.Log("Here " + size);
+            Debug.Log("Here " + levelN+ size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(0);
         }
         if(collected>0&&collected<size)
         {
-            Debug.Log("Here " + size);
+            Debug.Log("Here " + levelN + size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(1);
         }
         if(collected==size)
         {
-            Debug.Log("Here " + size);
+            Debug.Log("Here " + levelN + size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(2);
         }
     }

@@ -6,11 +6,16 @@ public class ChangeMapPointColors : MonoBehaviour
 {
     public int levelN;
     public Texture2D[] Colors;
+    public bool UnlockedLevel=false;
 
     // Start is called before the first frame update
-    void Start()
+    public void checkColor()
     {
-        Levelscollectiblemanager.instance.ChangeMapPointColor(levelN);
+        if(UnlockedLevel)
+        {
+            Levelscollectiblemanager.instance.ChangeMapPointColor(levelN);
+        }
+       
     }
 
     public void UpdateColorDependingonCollectible(int texture)
