@@ -176,7 +176,6 @@ public class PlayerController : MonoBehaviour
     }
     public void StopWinningAnim()
     {
-        Debug.Log("Here");
         PlayerAnimator.SetBool("Won", false);
     }
 }

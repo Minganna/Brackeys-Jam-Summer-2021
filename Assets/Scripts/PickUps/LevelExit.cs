@@ -6,6 +6,8 @@ public class LevelExit : MonoBehaviour
 {
     Animator anim;
     public bool endLevel = true;
+    public int tadpoleindex;
+    public int Level;
     // Start is called before the first frame update
     void Start()
     {

@@ -18,7 +18,6 @@ public class exitanimationStates : MonoBehaviour
 
     public void ExitWinning()
     {
-        Debug.Log("Here");
         PlayerController.instance.canMove = true;
         PlayerController.instance.StopWinningAnim();
     }

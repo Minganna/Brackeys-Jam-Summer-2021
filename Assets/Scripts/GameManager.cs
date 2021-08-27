@@ -126,7 +126,13 @@ public class GameManager : MonoBehaviour
     public IEnumerator LevelEndCo(bool changeScene, LevelExit ordertadpole)
     {
         AudioManager.instance.Sfx(levelEndSfx);
-        orderTadPole += 1;
+        bool canbecollected=Levelscollectiblemanager.instance.checkIfCanBeCollected(ordertadpole);
+        
+        if(canbecollected)
+        {
+            orderTadPole += 1;
+        }
+        Levelscollectiblemanager.instance.UpdateLevel(ordertadpole);
         if (UiManager.instance.TadPoleText)
         {
             UiManager.instance.TadPoleText.text = orderTadPole.ToString();

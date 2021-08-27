@@ -78,9 +78,12 @@ public class UiManager : MonoBehaviour
         GameManager.instance.PauseUnPause();
         SceneManager.LoadScene(levelSelect);
     }
+
     public void MainMenu()
     {
         GameManager.instance.PauseUnPause();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene(mainMenu);
     }
 

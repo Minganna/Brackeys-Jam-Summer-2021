@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class HealthManager : MonoBehaviour
     private float invincibleCounter;
     public int DeathSFX;
 
+    public string gameOver;
+
     private void Awake()
     {
         instance = this;
@@ -20,6 +23,7 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         ResetHealth();
+       
     }
 
     // Update is called once per frame
@@ -125,9 +129,15 @@ public class HealthManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("BackToMainScreen");
+            GameOver();
         }
         UpdateUI();
         
+    }
+
+    public void GameOver()
+    {
+        gameOver = "LevelsWorld";
+        SceneManager.LoadScene(gameOver);
     }
 }
