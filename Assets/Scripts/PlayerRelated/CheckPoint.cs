@@ -44,7 +44,8 @@ public class CheckPoint : MonoBehaviour
         if(other.tag=="Player")
         {
             CheckPointActivateAndDeactivateLogic();
-            AudioManager.instance.Sfx(checkpointSfx);
+
+            
         }
     }
 
@@ -66,6 +67,7 @@ public class CheckPoint : MonoBehaviour
         if (!IscheckPointOn)
         {
             CheckPointParticles.SetActive(true);
+            AudioManager.instance.Sfx(checkpointSfx);
         }
         this.GetComponent<Renderer>().material.SetTexture("_MainTex", CheckPointOn);
         IscheckPointOn = true;

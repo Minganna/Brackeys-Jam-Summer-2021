@@ -15,4 +15,11 @@ public class exitanimationStates : MonoBehaviour
         PlayerController.instance.canMove = true;
         PlayerController.instance.canPunch = true;
     }
+
+    public void ExitWinning()
+    {
+        Debug.Log("Here");
+        PlayerController.instance.canMove = true;
+        PlayerController.instance.StopWinningAnim();
+    }
 }

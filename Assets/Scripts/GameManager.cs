@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class GameManager : MonoBehaviour
     
     Vector3 respawnPosition;
 
-    public static int CollectibleCount;
+    public int CollectibleCount;
+    public static int orderTadPole;
 
     public static bool isSketchCameraOn;
+    public int levelEndSfx = 9;
+
+    public string levelToLoad;
 
     private void Awake()
     {
@@ -81,6 +86,13 @@ public class GameManager : MonoBehaviour
     {
         CollectibleCount += valueToAdd;
         UiManager.instance.CoinText.text = "" + CollectibleCount;
+        if(CollectibleCount==50)
+        {
+            if(LevelManager.instance)
+            {
+                LevelManager.instance.showHiddenTadPole();
+            } 
+        }
     }
 
 
@@ -108,5 +120,27 @@ public class GameManager : MonoBehaviour
         isSketchCameraOn = true;
         Camera.main.GetComponent<CameraSketch>().enabled = isSketchCameraOn;
        
+    }
+
+
+    public IEnumerator LevelEndCo(bool changeScene, LevelExit ordertadpole)
+    {
+        AudioManager.instance.Sfx(levelEndSfx);
+        orderTadPole += 1;
+        if (UiManager.instance.TadPoleText)
+        {
+            UiManager.instance.TadPoleText.text = orderTadPole.ToString();
+        }
+        yield return new WaitForSeconds(2.0f);
+        
+        if(changeScene)
+        {
+            SceneManager.LoadScene(levelToLoad);
+        }
+        else
+        {
+            ordertadpole.DestroyObject();
+        }
+
     }
 }

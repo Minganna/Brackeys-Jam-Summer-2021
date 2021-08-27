@@ -165,4 +165,18 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = bounceForce;
         charController.Move(moveDirection * Time.deltaTime);
     }
+
+    public void SetWinningAnim()
+    {
+       
+        PlayerAnimator.SetBool("Won",true);
+        playerModel.transform.LookAt(2 * playerModel.transform.position-Camera.main.transform.position);
+        playerModel.transform.rotation = Quaternion.Euler(0.0f, transform.rotation.eulerAngles.y-180, 0.0f);
+        canMove = false;
+    }
+    public void StopWinningAnim()
+    {
+        Debug.Log("Here");
+        PlayerAnimator.SetBool("Won", false);
+    }
 }

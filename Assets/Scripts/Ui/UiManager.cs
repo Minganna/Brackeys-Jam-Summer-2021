@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -16,10 +17,13 @@ public class UiManager : MonoBehaviour
     public Image[] HealthImages;
     public TextMeshProUGUI LifeText;
     public TextMeshProUGUI CoinText;
+    public TextMeshProUGUI TadPoleText;
     public GameObject pauseScreen,OptionScreen;
 
     public Slider MusicVolSlider;
     public Slider SfxVolSlider;
+
+    public string levelSelect, mainMenu;
 
 
     private void Awake()
@@ -30,7 +34,10 @@ public class UiManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (TadPoleText)
+        {
+            TadPoleText.text = GameManager.orderTadPole.ToString();
+        }
     }
 
     // Update is called once per frame
@@ -68,11 +75,13 @@ public class UiManager : MonoBehaviour
     }
     public void LevelSelect()
     {
-
+        GameManager.instance.PauseUnPause();
+        SceneManager.LoadScene(levelSelect);
     }
     public void MainMenu()
     {
-
+        GameManager.instance.PauseUnPause();
+        SceneManager.LoadScene(mainMenu);
     }
 
     public void SetMusicLevel()
