@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: This seems to be some sort of portal for another world
+  Text: This seems to be some sort of portal for another area
   children:
   - b4c73461-cc0d-4d71-bd94-db34ee03bd69
   position:

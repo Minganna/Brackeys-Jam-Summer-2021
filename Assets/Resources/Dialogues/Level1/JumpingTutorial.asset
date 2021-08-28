@@ -56,7 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: try to press the Space bar to Jump on these platforms and collect those succule.....
+  Text: try to press the Space bar to jump on these platforms and collect those succule.....
     interesting worms!
   children: []
   position:

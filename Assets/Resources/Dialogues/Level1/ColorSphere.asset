@@ -39,7 +39,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: if you are unsure on how to punch try pressing E or left mouse click near
+  Text: if you are unsure on how to punch, try pressing E or left mouse click near
     the sphere
   children: []
   position:
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: This is a color sphere, it contains the color of this world as we see
+  Text: This is a color sphere, it contains the color of this world as we see them
   children:
   - 2191af6e-0322-4332-8d4e-ff069945becf
   position:
@@ -107,8 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: as well as a order tadpole... you should be able to free it by punching the
-    sphere
+  Text: as well as an order tadpole... you should be able to free it by punching
+    the sphere
   children:
   - 9bf3beba-a7ef-4305-b150-72e3f5c11180
   position:

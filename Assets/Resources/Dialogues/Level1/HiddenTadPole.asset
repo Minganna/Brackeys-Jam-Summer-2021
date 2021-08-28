@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: maybe if you collect all of those... delicious wax worm it will happear?
+  Text: maybe if you collect 50 of those... delicious wax worm it will happear?
   children: []
   position:
     serializedVersion: 2
     x: 510
-    y: -8
+    y: -9
     width: 250
     height: 100
   OnEnterAction: 
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: This might sound weird... but I sense a order tadpole in this area....
+  Text: This might sound weird... but I sense an order tadpole in this area....
   children:
   - 2033e213-1ce6-498b-8c70-08031a91b3cd
   position:

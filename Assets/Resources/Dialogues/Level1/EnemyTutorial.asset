@@ -39,7 +39,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: it seems that one of them holds a order tadpole
+  Text: it seems that one of them holds an order tadpole
   children: []
   position:
     serializedVersion: 2
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerSpeaking: 0
   Question: 0
-  Text: Be careful on these guys, the look dangerous
+  Text: there are some enemies down there and they look dangerous!
   children:
   - e64fc32e-92c9-4332-b183-0b2b18e4250c
   position:
