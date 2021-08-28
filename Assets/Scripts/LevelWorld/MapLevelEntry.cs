@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MapLevelEntry : MonoBehaviour
 {
 
-    public string levelName,levelToCheck;
+    public string levelName,levelToCheck,displayName;
 
     bool canLoadLevel,levelUnlocked;
 
@@ -30,26 +30,41 @@ public class MapLevelEntry : MonoBehaviour
         {
             GetComponent<ChangeMapPointColors>().checkColor();
         }
+        if (PlayerPrefs.GetString("CurrentLevel") == levelName)
+        {
+            PlayerController.instance.gameObject.SetActive(false);
+            PlayerController.instance.transform.position = new Vector3(transform.position.x, transform.position.y + 3.0f, transform.position.z);
+            PlayerController.instance.gameObject.SetActive(true);
+            if(FindObjectOfType<LevelWorldResetPosition>())
+            {
+                FindObjectOfType<LevelWorldResetPosition>().PlayerPos = new Vector3(transform.position.x, transform.position.y + 3.0f, transform.position.z);
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canLoadLevel&&levelUnlocked)
+        if(canLoadLevel&&levelUnlocked&&PlayerController.instance.canPunch)
         {
             if (Input.GetButtonDown("Jump") || Input.GetButtonDown("Fire1"))
             {
+                PlayerPrefs.SetString("CurrentLevel", levelName);
                 SceneManager.LoadScene(levelName);
             }
         }
-        
+
     }
+
+
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="Player")
         {
             canLoadLevel = true;
+            LevelWorldManager.instance.lNamePanel.SetActive(true);
+            LevelWorldManager.instance.lNameText.text = displayName;
         }
     }
     private void OnTriggerExit(Collider other)
@@ -57,6 +72,7 @@ public class MapLevelEntry : MonoBehaviour
         if (other.tag == "Player")
         {
             canLoadLevel = false;
+            LevelWorldManager.instance.lNamePanel.SetActive(false);
         }
     }
 }

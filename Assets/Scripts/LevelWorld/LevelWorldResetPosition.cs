@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LevelWorldResetPosition : MonoBehaviour
 {
+    public Vector3 PlayerPos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        PlayerPos = PlayerController.instance.transform.position;
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class LevelWorldResetPosition : MonoBehaviour
         if(other.tag=="Player")
         {
             PlayerController.instance.gameObject.SetActive(false);
-            PlayerController.instance.transform.position = new Vector3(0.0f, 10.0f, 0.0f);
+            PlayerController.instance.transform.position = PlayerPos;
             PlayerController.instance.gameObject.SetActive(true);
         }
     }

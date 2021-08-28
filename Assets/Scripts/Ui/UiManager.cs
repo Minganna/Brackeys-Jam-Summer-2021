@@ -64,6 +64,7 @@ public class UiManager : MonoBehaviour
     public void Resume()
     {
         GameManager.instance.PauseUnPause();
+        PlayerController.instance.canPunch = true;
     }
     public void OpenOptions()
     {

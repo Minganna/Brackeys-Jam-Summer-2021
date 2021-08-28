@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4ba9dd5bd86c74cb9636e39c304dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: LevelSelect
+  firstLevel: StoryScene
   levelSelect: Level2
   ContinueButton: {fileID: 1454701795}
 --- !u!1 &145464119

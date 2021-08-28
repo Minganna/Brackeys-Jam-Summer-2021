@@ -7,9 +7,8 @@ public class LevelWorldCamera : MonoBehaviour
     public Transform Target;
     Vector3 Offset;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        Target = PlayerController.instance.gameObject.transform;
         Offset = transform.position - Target.position;
     }
 

@@ -3401,7 +3401,7 @@ MonoBehaviour:
   OptionScreen: {fileID: 1744208849290527973}
   MusicVolSlider: {fileID: 1744208849745713560}
   SfxVolSlider: {fileID: 1744208850876875047}
-  levelSelect: LevelSelect
+  levelSelect: LevelsWorld
   mainMenu: MainMenu
 --- !u!1 &1744208850863603422
 GameObject:
@@ -4563,7 +4563,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 38475b89498e27b41a5080af7f180c4f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 171d5d9c08479774f80c3136a263abb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

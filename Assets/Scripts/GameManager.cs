@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     {
         if(Input.GetButtonDown("PauseMenu"))
         {
+            PlayerController.instance.canPunch = false;
             PauseUnPause();
         }
     }

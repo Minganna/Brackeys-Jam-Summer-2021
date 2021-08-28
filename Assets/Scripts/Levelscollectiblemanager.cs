@@ -10,6 +10,7 @@ public class Levelscollectiblemanager : MonoBehaviour
     public static bool[] level1=new bool[3];
     public static bool[] level2 = new bool[2];
     public static bool[] level3 = new bool[2];
+    public static bool[] level4 = new bool[2];
     // Start is called before the first frame update
     private void Awake()
     {
@@ -43,6 +44,11 @@ public class Levelscollectiblemanager : MonoBehaviour
             case 2:
                 {
                     level3[tadpole.tadpoleindex] = true;
+                    break;
+                }
+            case 3:
+                {
+                    level4[tadpole.tadpoleindex] = true;
                     break;
                 }
         }
@@ -81,6 +87,18 @@ public class Levelscollectiblemanager : MonoBehaviour
             case 2:
                 {
                     foreach (bool achieved in level3)
+                    {
+                        if (achieved)
+                        {
+                            collected++;
+                        }
+                        size++;
+                    }
+                    break;
+                }
+            case 3:
+                {
+                    foreach (bool achieved in level4)
                     {
                         if (achieved)
                         {
@@ -135,6 +153,17 @@ public class Levelscollectiblemanager : MonoBehaviour
             case 2:
                 {
                     if (level3[ordertadpole.tadpoleindex])
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+            case 3:
+                {
+                    if (level4[ordertadpole.tadpoleindex])
                     {
                         return false;
                     }
