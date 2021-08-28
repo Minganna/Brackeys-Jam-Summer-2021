@@ -906,6 +906,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2698016455212317339, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: levelMusicToPlay
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3598165051217232452, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -958,6 +962,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6509832087598242263, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
+      propertyPath: Sun
+      value: 
+      objectReference: {fileID: 1241225876}
     - target: {fileID: 6509832087797572379, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalRotation.x
       value: -0.058509335
@@ -1024,11 +1032,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6509832088656479005, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000012068002
+      value: 0.00000001613418
       objectReference: {fileID: 0}
     - target: {fileID: 6509832088656479005, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000156142
+      value: -0.0000000059801235
       objectReference: {fileID: 0}
     - target: {fileID: 6509832088656479005, guid: 13b478b3dcc975e4181a1ed64b028673, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2485,6 +2493,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072471d496654074f9afca4e223eff3f, type: 3}
+--- !u!4 &1241225876 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6738769209646235390, guid: 072471d496654074f9afca4e223eff3f, type: 3}
+  m_PrefabInstance: {fileID: 1241225875}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1296106424
 PrefabInstance:
   m_ObjectHideFlags: 0

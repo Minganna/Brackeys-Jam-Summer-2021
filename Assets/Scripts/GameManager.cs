@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public int levelEndSfx = 9;
 
     public string levelToLoad;
+    public Transform Sun;
+    public static bool SunRotated;
 
     private void Awake()
     {
@@ -31,6 +33,11 @@ public class GameManager : MonoBehaviour
         if(PlayerController.instance)
         {
             respawnPosition = PlayerController.instance.transform.position;
+        }
+
+        if(SunRotated)
+        {
+            Sun.rotation = Quaternion.Euler(0.0f, transform.rotation.eulerAngles.y - 180.0f, 0.0f);
         }
 
         AddCollectable(CollectibleCount);
@@ -155,5 +162,16 @@ public class GameManager : MonoBehaviour
             ordertadpole.DestroyObject();
         }
 
+    }
+
+
+    public int getOrderTadPolesN()
+    {
+        return orderTadPole;
+    }
+
+    public void SetRotationSun()
+    {
+        SunRotated = true;
     }
 }

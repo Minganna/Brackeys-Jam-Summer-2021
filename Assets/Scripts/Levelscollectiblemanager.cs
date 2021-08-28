@@ -94,17 +94,14 @@ public class Levelscollectiblemanager : MonoBehaviour
         }
         if(collected==0)
         {
-            Debug.Log("Here " + levelN+ size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(0);
         }
         if(collected>0&&collected<size)
         {
-            Debug.Log("Here " + levelN + size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(1);
         }
         if(collected==size)
         {
-            Debug.Log("Here " + levelN + size);
             LevelsPoints[levelN].UpdateColorDependingonCollectible(2);
         }
     }
